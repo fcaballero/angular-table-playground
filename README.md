@@ -2,8 +2,8 @@
 
 In order to be able to use this project you must have installed nodeJS
 
-node version: 4.2.1
-npm version: 2.14.7
+node version: v5.6.0
+npm version: v3.6.0
 
 After installing nodeJS execute the next commands:
 ```shell

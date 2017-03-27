@@ -1,0 +1,18 @@
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <td ng-repeat="header in ::$ctrl.header">
+            <a href="" ng-click="$ctrl.sortTableByType(header.key)">
+                <span ng-bind-html="::header.value"></span>
+                <span ng-show="$ctrl.isSortType(header.key)" class="glyphicon" ng-class="{'glyphicon-triangle-bottom': !$ctrl.sortReverse,
+                'glyphicon-triangle-top': $ctrl.sortReverse}"></span>
+            </a>
+        </td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in $ctrl.data | orderBy:$ctrl.sortType:$ctrl.sortReverse | filter:$ctrl.searchTerm">
+        <td ng-repeat="header in ::$ctrl.header" ng-bind-html="item[header.key]"></td>
+    </tr>
+    </tbody>
+</table>
